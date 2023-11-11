@@ -1,0 +1,96 @@
+{
+  "extensionName": {
+    "message": "Email Masker",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "An Email Masker for Skiff Mail using Quick Aliases",
+    "description": "Description of the extension."
+  },
+  "title": {
+    "message": "Email Masker for Skiff",
+    "description": "Title of the extension."
+  },
+  "footer": {
+    "message": "Mask your Email Address using",
+    "description": "Footer note of the extension."
+  },
+  "credit": {
+    "message": "Extension by",
+    "description": "Credit note of the extension."
+  },
+  "maskedEmailLabel": {
+    "message": "Masked Email",
+    "description": "Label for masked email address."
+  },
+  "clickToCopyTooltip": {
+    "message": "Click to Copy",
+    "description": "Tooltip instruction for Copying Masked Email Address."
+  },
+  "generateEmailTooltip": {
+    "message": "Generate Email",
+    "description": "Tooltip instruction for Generating Masked Email Address."
+  },
+  "copySuccessToast": {
+    "message": "Masked Email Copied",
+    "description": "Toast success message for copying masked email address."
+  },
+  "shortcodeAddedToast": {
+    "message": "Shortcode Added",
+    "description": "Toast success title for adding shortcode."
+  },
+  "shortcodeAddedToastDesc": {
+    "message": "Added [$shortcode$] to the email format.",
+    "description": "Toast success description for adding shortcode.",
+    "placeholders": {
+      "shortcode": {
+        "content": "$1",
+        "example": "domain"
+      }
+    }
+  },
+  "invalidEmailFormatToast": {
+    "message": "Invalid Email Format",
+    "description": "Toast error title for invalid email format."
+  },
+  "invalidEmailFormatToastDesc": {
+    "message": "Please enter a valid email format.",
+    "description": "Toast error description for invalid email format."
+  },
+  "invalidEmailDomainToastDesc": {
+    "message": "Must end with *.maskmy.id",
+    "description": "Toast error description for invalid email domain."
+  },
+  "emailFormatUpdatedToast": {
+    "message": "Email Format Updated",
+    "description": "Toast success title for updating email format."
+  },
+  "emailFormatLabel": {
+    "message": "Email Format",
+    "description": "Label for email format."
+  },
+  "saveEmailFormatTooltip": {
+    "message": "Save Email Format",
+    "description": "Tooltip instruction for saving email format."
+  },
+  "shortcodesLabel": {
+    "message": "Shortcodes",
+    "description": "Label for shortcodes."
+  },
+  "shortcodeDomainDesc": {
+    "message": "Website domain",
+    "description": "Description for shortcode [domain]."
+  },
+  "shortcodeRandomDesc": {
+    "message": "Random string (length)",
+    "description": "Description for shortcode [random:length]."
+  },
+  "shortcodeWordsDesc": {
+    "message": "Random words (length)",
+    "description": "Description for shortcode [words:length]."
+  },
+  "shortcodeNumbersDesc": {
+    "message": "Random numbers (length)",
+    "description": "Description for shortcode [numbers:length]."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "email-masker",
+  "private": true,
+  "displayName": "__MSG_extensionName__",
+  "version": "0.0.1",
+  "description": "__MSG_extensionDescription__",
+  "author": "emailmasker@ehello.maskmy.id",
+  "scripts": {
+    "dev": "plasmo dev",
+    "dev:firefox": "plasmo dev --target=firefox-mv2",
+    "build": "plasmo build --hoist",
+    "build:firefox": "plasmo build --hoist --target=firefox-mv2",
+    "build:unoptimized": "plasmo build",
+    "build:pack": "plasmo build --hoist --zip",
+    "package": "plasmo package",
+    "package:firefox": "plasmo package --target=firefox-mv2",
+    "lint:js": "xo",
+    "lint:fix": "xo --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md,mjs}\"",
+    "dev-dashboard": "open \"https://chrome.google.com/webstore/developer/dashboard\""
+  },
+  "dependencies": {
+    "@plasmohq/storage": "^1.9.0",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.292.0",
+    "plasmo": "^0.84.0",
+    "random-words": "^2.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss": "^3.3.5",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.1.1",
+    "@types/chrome": "0.0.251",
+    "@types/node": "20.9.0",
+    "@types/react": "18.2.37",
+    "@types/react-dom": "18.2.15",
+    "@types/webextension-polyfill": "^0.10.6",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "prettier": "3.0.3",
+    "typescript": "5.2.2",
+    "webextension-polyfill": "^0.10.0",
+    "xo": "^0.56.0"
+  },
+  "manifest": {
+    "default_locale": "en",
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "emailmaskerff@ehello.maskmy.id"
+      }
+    },
+    "permissions": [
+      "activeTab",
+      "storage"
+    ]
+  },
+  "xo": {
+    "prettier": true,
+    "ignores": [
+      "src/components/ui/**/*.{ts,tsx}"
+    ],
+    "envs": [
+      "browser"
+    ],
+    "globals": [
+      "browser"
+    ],
+    "rules": {
+      "unicorn/prefer-module": 0,
+      "@typescript-eslint/naming-convention": 0,
+      "@typescript-eslint/ban-types": 0,
+      "import/extensions": 0,
+      "import/no-named-as-default": 0
+    }
+  }
+}
