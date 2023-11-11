@@ -50,26 +50,28 @@ Extension by [@irazasyed](https://github.com/irazasyed)
 ## Highlights
 
 <table>
-	<tr>
-		<th width="60%">
-			Popup
-		</th>
-		<th width="40%">
-			On-Page
-		</th>
-	</tr>
-	<tr><!-- Prevent zebra stripes --></tr>
-	<tr>
+    <tr>
+        <td align="center">
+            <b>Highlights</b><br>
+            <img src=".github/assets/screenshots/highlights.jpg" alt="Email Masker Highlights">
+        </td>
+        <td align="center">
+            <b>Light and Dark Mode</b><br>
+            <img src=".github/assets/screenshots/feature-highlight-2.jpg" alt="Light and Dark Modes">
+		</td>
+    </tr>
+    <tr>
 		<td align="center">
-            <b>Pop-up Preview with Dark/Light Mode</b><br>
-            <img src=".github/assets/popup.png" alt="Email Masker Popup">
+            <b>Customizable Email Format</b><br>
+            <img src=".github/assets/screenshots/feature-highlight-1.jpg" alt="Customizable Email Format">
 		</td>
 		<td align="center">
             <b>Flame icon in Email input field</b><br>
-            <img src=".github/assets/on-page.png" alt="Email Masker On-Page">
-		</td>
+            <img src=".github/assets/on-page.png" width="250" alt="Email Masker On-Page">
+        </td>
 	</tr>
 </table>
+
 
 ## Email Format Templates
 
