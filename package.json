@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "description": "__MSG_extensionDescription__",
   "author": "emailmasker@ehello.maskmy.id",
+  "homepage": "https://github.com/irazasyed/email-masker",
   "scripts": {
     "dev": "plasmo dev",
     "dev:firefox": "plasmo dev --target=firefox-mv2",
