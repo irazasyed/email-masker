@@ -6,6 +6,8 @@
 
 Extension by [@irazasyed](https://github.com/irazasyed)
 
+<img src=".github/assets/screenshots/hero.jpg" align="center" alt="Email Masker">
+
 ## Contents
 
 - [Features](#features)
