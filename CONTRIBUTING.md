@@ -67,13 +67,29 @@ You can start editing the popup by modifying `src/popup.tsx`, and it should auto
 
 ### Chrome
 
-**Access the development build in Chrome**: Follow these steps:
+**Access the development build in Chrome**: Choose one of the following options:
 
-- Open Chrome.
-- Navigate to `chrome://extensions/` (`More Tools` > `Extensions`).
-- Enable `Developer mode` in the top-right corner.
-- Click `Load unpacked`.
-- Select the `build/chrome-mv3-dev` folder.
+- **Run via command-line**:
+
+  - Run the development server:
+
+    ```bash
+    pnpm run dev
+    ```
+
+  - Run the following command to start Google Chrome with the extension loaded:
+
+    ```bash
+    pnpm run start
+    ```
+
+- **Load as an unpacked extension**:
+
+  - Open Chrome.
+  - Navigate to `chrome://extensions/` (`More Tools` > `Extensions`).
+  - Enable `Developer mode` in the top-right corner.
+  - Click `Load unpacked`.
+  - Select the `build/chrome-mv3-dev` folder.
 
 ### Firefox
 
@@ -81,25 +97,17 @@ You can start editing the popup by modifying `src/popup.tsx`, and it should auto
 
 - **Run via command-line (with automatic reloading when files change)**:
 
-  - Install `web-ext` globally:
-
-    ```bash
-    npm install -g web-ext
-    ```
-
   - Run the development server:
 
     ```bash
     pnpm run dev:firefox
     ```
 
-  - Navigate into the `build/firefox-mv2-dev` directory and run `web-ext`:
+  - Run the following command to start Firefox with the add-on loaded:
 
     ```bash
-    web-ext run
+    pnpm run start:firefox
     ```
-
-  This will open a browser with the add-on loaded.
 
 - **Load as a temporary add-on**:
 
