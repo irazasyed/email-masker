@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from 'clsx'
 import { generate } from 'random-words'
 import { twMerge } from 'tailwind-merge'
+import { getDomainWithoutSuffix } from 'tldts'
 import browser from 'webextension-polyfill'
 import { toast } from '@/components/ui/use-toast'
 import { DEFAULT_EMAIL_DOMAIN } from '@/lib/constants'
@@ -67,10 +68,11 @@ export function normalizeToAlphanumeric(stringToNormalize: string): string {
 
 // Extract the primary domain from a hostname
 export function getPrimaryDomain(hostname: string): string {
-  const parts = hostname.split('.')
-  const primaryDomain = parts.at(-2)
+  const primaryDomain = getDomainWithoutSuffix(hostname, {
+    allowPrivateDomains: true
+  })
 
-  return primaryDomain ? normalizeToAlphanumeric(primaryDomain) : hostname
+  return primaryDomain ? normalizeToAlphanumeric(primaryDomain) : ''
 }
 
 // Generate a random string of the given length

@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import '@/style.css'
 import FormatManager from '@/components/format-manager'
 import Layout from '@/components/layout'
-import GeneratedEmail from '@/components/masked-email'
+import MaskedEmail from '@/components/masked-email'
 import { getActiveTabHostname } from '@/lib/utils'
 
 function IndexPopup() {
@@ -14,7 +14,7 @@ function IndexPopup() {
 
   return (
     <Layout>
-      <GeneratedEmail hostname={hostname} />
+      <MaskedEmail hostname={hostname} />
       <FormatManager />
     </Layout>
   )

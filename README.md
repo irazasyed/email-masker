@@ -1,5 +1,9 @@
 # Email Masker Browser Extension [<img src="assets/icon.png" width="168" align="right" alt="Email Masker">](https://github.com/irazasyed/email-masker)
 
+[![Licence](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE.md)
+[![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/oedhkcdedcfloepkpacoocblokifkgjf?style=flat-square&label=Chrome%20Users)][link-cws]
+[![Mozilla Add-on Users](https://img.shields.io/amo/users/email-masker?style=flat-square&label=Firefox%20Users)][link-amo]
+
 > Email Masker is an open-source browser extension that helps you generate and use masked email addresses for your online accounts using [Quick Aliases](https://dub.sh/quick-alias) powered by [Skiff Mail](https://skiff.com/mail?utm_content=readme&utm_medium=extension&utm_source=email_masker).
 >
 > It helps you protect your privacy and keep your inbox clean from spam.
@@ -7,6 +11,10 @@
 Extension by [@irazasyed](https://github.com/irazasyed)
 
 <img src=".github/assets/screenshots/hero.jpg" align="center" alt="Email Masker">
+
+[<img src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="for Chrome" height="60px">][link-cws]
+[<img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="for Firefox" height="60px">][link-amo]
+[<img src="https://dev.opera.com/extensions/branding-guidelines/addons_206x58_en@2x.png" alt="for Opera" height="60px">][link-oas]
 
 ## Contents
 
@@ -31,7 +39,7 @@ Extension by [@irazasyed](https://github.com/irazasyed)
 
 **🗣️ Multilingual Support**: Enjoy the extension in multiple languages.
 
-**🌐 Multi-Browser Compatibility**: Works on Chrome, Brave, Edge, and Firefox.
+**🌐 Multi-Browser Compatibility**: Works on Chrome, Brave, Edge, Opera, Firefox, and More.
 
 **🌙 Light & Dark Modes**: Choose your preferred interface theme.
 
@@ -43,35 +51,44 @@ Extension by [@irazasyed](https://github.com/irazasyed)
 
 ## Supported Browsers
 
-✅ Chrome / Brave / Edge
+✅ Chrome / Brave / Edge / Opera / Any Chromium Browser.
 
 ✅ Firefox
+
+✅ Orion / Any WebKit Browser that supports Web Extensions via Chrome Web Store/Firefox Addon Store.
+
+### Other browsers
+
+If you use another Chromium-based browser like Vivaldi, you can usually install the Chrome version.
 
 ## Highlights
 
 <table>
     <tr>
+        <th align="center">Highlights</th>
+        <th align="center">Light and Dark Mode</th>
+    </tr>
+    <tr>
         <td align="center">
-            <b>Highlights</b><br>
             <img src=".github/assets/screenshots/highlights.jpg" alt="Email Masker Highlights">
         </td>
         <td align="center">
-            <b>Light and Dark Mode</b><br>
             <img src=".github/assets/screenshots/feature-highlight-2.jpg" alt="Light and Dark Modes">
 		</td>
     </tr>
     <tr>
+        <th align="center">Customizable Email Format</th>
+        <th align="center">Flame icon in Email input field</th>
+    </tr>
+    <tr>
 		<td align="center">
-            <b>Customizable Email Format</b><br>
             <img src=".github/assets/screenshots/feature-highlight-1.jpg" alt="Customizable Email Format">
 		</td>
 		<td align="center">
-            <b>Flame icon in Email input field</b><br>
             <img src=".github/assets/on-page.png" width="250" alt="Email Masker On-Page">
         </td>
 	</tr>
 </table>
-
 
 ## Email Format Templates
 
@@ -162,3 +179,7 @@ MIT
 ## Disclaimer
 
 This project is not affiliated with, endorsed by, or sponsored in any way by Skiff.
+
+[link-cws]: https://dub.sh/emailmasker-chrome 'Version published on Chrome Web Store'
+[link-amo]: https://dub.sh/emailmasker-firefox 'Version published on Mozilla Add-ons'
+[link-oas]: https://dub.sh/emailmasker-opera 'Version published on Opera Add-ons'
