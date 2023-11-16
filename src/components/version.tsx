@@ -4,6 +4,10 @@ export default function Version() {
   const version = packageJson?.version
 
   return (
-    version && <span className="text-sm text-muted-foreground">V{version}</span>
+    version && (
+      <span className="text-sm text-muted-foreground font-normal">
+        V{version}
+      </span>
+    )
   )
 }

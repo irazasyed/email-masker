@@ -84,18 +84,18 @@ export const addInlineStyles = (
   element: HTMLElement,
   styles: Record<string, string>
 ) => {
-  for (const [property, value] of Object.entries(styles)) {
+  Object.entries(styles).forEach(([property, value]) => {
     element.style.setProperty(property, value, 'important')
-  }
+  })
 }
 
 export const removeInlineStyles = (
   element: HTMLElement,
   styles: Record<string, string>
 ) => {
-  for (const property of Object.keys(styles)) {
+  Object.keys(styles).forEach((property) =>
     element.style.removeProperty(property)
-  }
+  )
 }
 
 export const getBasicStyles = (input: HTMLInputElement, icon: string) => ({
@@ -130,12 +130,13 @@ export const setValueForInput = (element: HTMLInputElement, value: string) => {
     new Event('keyup', { bubbles: true }),
     new Event('change', { bubbles: true })
   ]
-  for (const ev of events) {
-    element.dispatchEvent(ev)
-  }
+  events.forEach((ev) => element.dispatchEvent(ev))
 
   // Set the value again to ensure compatibility
   originalSet?.call(element, value)
+
+  // Dispatch events again to ensure compatibility
+  events.forEach((ev) => element.dispatchEvent(ev))
 
   // Blur the element to complete the interaction
   element.blur()

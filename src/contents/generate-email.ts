@@ -4,7 +4,6 @@ import type {
   PlasmoGetInlineAnchorList
 } from 'plasmo'
 import icon from 'data-base64:~assets/flame.svg'
-import { useStorage } from '@plasmohq/storage/hook'
 import { applyShortcodesWithDomain } from '@/lib/apply-shortcodes'
 import {
   addInlineStyles,
@@ -13,7 +12,7 @@ import {
   removeInlineStyles,
   setValueForInput
 } from '@/lib/autofill-utils'
-import { DEFAULT_EMAIL_FORMAT, EMAIL_FORMAT_STORE_KEY } from '@/lib/constants'
+import { getEmailFormat } from '@/lib/email-format'
 import inputSelector from '@/lib/input-selector'
 
 export const config: PlasmoCSConfig = {
@@ -26,21 +25,11 @@ export const config: PlasmoCSConfig = {
   ]
 }
 
-export const getInlineAnchorList: PlasmoGetInlineAnchorList = async () =>
-  document.querySelectorAll(inputSelector)
-
-const GenerateEmailCSUI = ({ anchor }: PlasmoCSUIProps) => {
-  const [emailFormat] = useStorage<string>(
-    EMAIL_FORMAT_STORE_KEY,
-    DEFAULT_EMAIL_FORMAT
-  )
-
-  const element = anchor?.element as HTMLInputElement
-
+function generateEmailIcon(input: HTMLInputElement, emailFormat: string) {
   const generateEmail = () => {
-    if (element) {
+    if (input) {
       setValueForInput(
-        element,
+        input,
         applyShortcodesWithDomain(emailFormat, window.location.hostname)
       )
     }
@@ -48,38 +37,44 @@ const GenerateEmailCSUI = ({ anchor }: PlasmoCSUIProps) => {
 
   let isDaxHovered = false
 
-  element.addEventListener('mousemove', (event) => {
+  input.addEventListener('mousemove', (event) => {
     const isWithinDax = isEventWithinDax(
       event,
       event.target as HTMLInputElement
     )
     if (isWithinDax && !isDaxHovered) {
       isDaxHovered = true
-      addInlineStyles(element, {
+      addInlineStyles(input, {
         cursor: 'pointer',
-        ...getBasicStyles(element, icon)
+        ...getBasicStyles(input, icon)
       })
     } else if (!isWithinDax && isDaxHovered) {
       isDaxHovered = false
-      removeInlineStyles(element, { cursor: 'pointer' })
+      removeInlineStyles(input, { cursor: 'pointer' })
     }
   })
 
-  element.addEventListener('click', (event) => {
+  input.addEventListener('click', (event) => {
     if (
       isEventWithinDax(event, event.target as HTMLInputElement) &&
-      element.offsetWidth > 50
+      input.offsetWidth > 50
     ) {
       event.preventDefault()
       event.stopImmediatePropagation()
-      element.blur()
+      input.blur()
       generateEmail()
     }
   })
 
-  addInlineStyles(element, getBasicStyles(element, icon))
-
-  return null
+  addInlineStyles(input, getBasicStyles(input, icon))
 }
 
-export default GenerateEmailCSUI
+window.addEventListener('load', async () => {
+  const emailFormat = await getEmailFormat()
+
+  document
+    .querySelectorAll(inputSelector)
+    .forEach((input: HTMLInputElement) => {
+      generateEmailIcon(input, emailFormat)
+    })
+})

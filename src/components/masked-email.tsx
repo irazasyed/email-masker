@@ -4,11 +4,11 @@ import { useStorage } from '@plasmohq/storage/hook'
 import Info from '@/components/info'
 import { Button, Input, Label } from '@/components/ui'
 import { applyShortcodesWithDomain } from '@/lib/apply-shortcodes'
-import { DEFAULT_EMAIL_FORMAT, EMAIL_FORMAT_STORE_KEY } from '@/lib/constants'
+import { DEFAULT_EMAIL_FORMAT, STORAGE_EMAIL_FORMAT } from '@/lib/email-format'
 import { copyToClipboard, lang, notify } from '@/lib/utils'
 
 function MaskedEmail({ hostname }: { hostname: string }) {
-  const [emailFormat] = useStorage(EMAIL_FORMAT_STORE_KEY, DEFAULT_EMAIL_FORMAT)
+  const [emailFormat] = useStorage(STORAGE_EMAIL_FORMAT, DEFAULT_EMAIL_FORMAT)
   const [maskedEmail, setMaskedEmail] = useState('')
 
   const generateMaskedEmail = () => {

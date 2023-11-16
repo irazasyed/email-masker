@@ -79,6 +79,7 @@
     ],
     "rules": {
       "unicorn/prefer-module": 0,
+      "unicorn/no-array-for-each": 0,
       "@typescript-eslint/naming-convention": 0,
       "@typescript-eslint/ban-types": 0,
       "import/extensions": 0,

@@ -4,7 +4,7 @@
     "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "An Email Masker for Skiff Mail using Quick Aliases",
+    "message": "Email Masker is an open-source browser extension that helps you generate and use masked email addresses for your online accounts using Skiff Quick Aliases.",
     "description": "Description of the extension."
   },
   "title": {

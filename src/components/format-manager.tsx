@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import { useStorage } from '@plasmohq/storage/hook'
 import Info from '@/components/info'
 import { Badge, Button, Input, Label } from '@/components/ui'
-import { DEFAULT_EMAIL_FORMAT, EMAIL_FORMAT_STORE_KEY } from '@/lib/constants'
+import { DEFAULT_EMAIL_FORMAT, STORAGE_EMAIL_FORMAT } from '@/lib/email-format'
 import { isEmail, isSkiffDomain, lang, notify } from '@/lib/utils'
 
 const shortcodes = {
@@ -15,7 +15,7 @@ const shortcodes = {
 
 export default function FormatManager() {
   const [emailFormat, setEmailFormat, { setRenderValue, setStoreValue }] =
-    useStorage(EMAIL_FORMAT_STORE_KEY, DEFAULT_EMAIL_FORMAT)
+    useStorage(STORAGE_EMAIL_FORMAT, DEFAULT_EMAIL_FORMAT)
 
   const emailInputRef = useRef<HTMLInputElement | null>(null)
 
