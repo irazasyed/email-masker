@@ -4,13 +4,13 @@
 [![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/oedhkcdedcfloepkpacoocblokifkgjf?style=flat-square&label=Chrome%20Users)][link-cws]
 [![Mozilla Add-on Users](https://img.shields.io/amo/users/email-masker?style=flat-square&label=Firefox%20Users)][link-amo]
 
-> Email Masker is an open-source browser extension that helps you generate and use masked email addresses for your online accounts using [Quick Aliases](https://dub.sh/quick-alias) powered by [Skiff Mail](https://skiff.com/mail?utm_content=readme&utm_medium=extension&utm_source=email_masker).
+> Email Masker is an open-source browser extension that helps you generate and use masked email addresses for your online accounts using [Skiff][link-skiff] [Quick Aliases](https://dub.sh/quick-alias).
 >
 > It helps you protect your privacy and keep your inbox clean from spam.
 
 Extension by [@irazasyed](https://github.com/irazasyed)
 
-<img src=".github/assets/screenshots/hero.jpg" align="center" alt="Email Masker">
+<img src=".github/assets/screenshots/Hero@2x.png" align="center" alt="Email Masker">
 
 [<img src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png" alt="for Chrome" height="60px">][link-cws]
 [<img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="for Firefox" height="60px">][link-amo]
@@ -66,26 +66,26 @@ If you use another Chromium-based browser like Vivaldi, you can usually install 
 <table>
     <tr>
         <th align="center">Highlights</th>
-        <th align="center">Light and Dark Mode</th>
+        <th align="center">Dark and Light Modes</th>
     </tr>
     <tr>
         <td align="center">
-            <img src=".github/assets/screenshots/highlights.jpg" alt="Email Masker Highlights">
+            <img src=".github/assets/screenshots/Highlights@2x.png" alt="Email Masker Highlights">
         </td>
         <td align="center">
-            <img src=".github/assets/screenshots/feature-highlight-2.jpg" alt="Light and Dark Modes">
+            <img src=".github/assets/screenshots/Feature_Dark-Light@2x.png" alt="Dark and Light Modes">
 		</td>
     </tr>
     <tr>
         <th align="center">Customizable Email Format</th>
-        <th align="center">Flame icon in Email input field</th>
+        <th align="center">On-Page Quick Generation</th>
     </tr>
     <tr>
 		<td align="center">
-            <img src=".github/assets/screenshots/feature-highlight-1.jpg" alt="Customizable Email Format">
+            <img src=".github/assets/screenshots/Feature_Customizable@2x.png" alt="Customizable Email Format">
 		</td>
 		<td align="center">
-            <img src=".github/assets/on-page.png" width="250" alt="Email Masker On-Page">
+            <img src=".github/assets/screenshots/Feature_On-Page@2x.png" alt="Email Masker On-Page">
         </td>
 	</tr>
 </table>
@@ -180,6 +180,7 @@ MIT
 
 This project is not affiliated with, endorsed by, or sponsored in any way by Skiff.
 
+[link-skiff]: https://dub.sh/skiff-ref 'Sign up for Skiff Mail'
 [link-cws]: https://dub.sh/emailmasker-chrome 'Version published on Chrome Web Store'
 [link-amo]: https://dub.sh/emailmasker-firefox 'Version published on Mozilla Add-ons'
 [link-oas]: https://dub.sh/emailmasker-opera 'Version published on Opera Add-ons'

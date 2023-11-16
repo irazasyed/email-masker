@@ -14,9 +14,10 @@ function Layout({ children }) {
         <Toaster />
         <CardHeader className="space-y-1 py-2 px-4">
           <div className="flex justify-between">
-            <CardTitle className="text-2xl flex items-center gap-2">
-              <img src={icon} alt="Logo" className="h-8 w-8" />
-              {lang('title')} <Version />
+            <CardTitle className="text-2xl flex items-center gap-2 font-bold">
+              <img src={icon} alt="Logo" className="h-10 w-10" />
+              {lang('title')}
+              <Version />
             </CardTitle>
             <div className="flex items-center gap-2">
               <ThemeModeToggle />
