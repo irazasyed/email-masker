@@ -43,6 +43,8 @@ Extension by [@irazasyed](https://github.com/irazasyed)
 
 **🌙 Light & Dark Modes**: Choose your preferred interface theme.
 
+**⚙️ Options**: Options to Enable/Disable on-page autofill, set default email format, and more.
+
 **🖥️ Clean User Interface**: Minimalistic design for a focused experience.
 
 **📂 Open-Source**: View and contribute to the source code.
