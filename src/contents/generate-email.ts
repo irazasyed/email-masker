@@ -1,8 +1,4 @@
-import type {
-  PlasmoCSConfig,
-  PlasmoCSUIProps,
-  PlasmoGetInlineAnchorList
-} from 'plasmo'
+import type { PlasmoCSConfig } from 'plasmo'
 import icon from 'data-base64:~assets/flame.svg'
 import { applyShortcodesWithDomain } from '@/lib/apply-shortcodes'
 import {
@@ -12,8 +8,10 @@ import {
   removeInlineStyles,
   setValueForInput
 } from '@/lib/autofill-utils'
-import { getEmailFormat } from '@/lib/email-format'
 import inputSelector from '@/lib/input-selector'
+import { getAutofill } from '@/lib/storage/autofill'
+import { getEmailFormat } from '@/lib/storage/email-format'
+import { isExcludedUrl } from '@/lib/storage/exclude-list'
 
 export const config: PlasmoCSConfig = {
   all_frames: true,
@@ -69,7 +67,17 @@ function generateEmailIcon(input: HTMLInputElement, emailFormat: string) {
   addInlineStyles(input, getBasicStyles(input, icon))
 }
 
+const isEnabled = async () => {
+  const autofill = await getAutofill()
+  if (!autofill) return false
+
+  const isExcluded = await isExcludedUrl(window.location.href)
+  return !isExcluded
+}
+
 window.addEventListener('load', async () => {
+  if (!(await isEnabled())) return
+
   const emailFormat = await getEmailFormat()
 
   document

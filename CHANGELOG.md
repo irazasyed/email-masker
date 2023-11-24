@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Option to disable on-page email generation.
+- Option to exclude specific pages from being shown on-page email generation.
+
+### Changed
+
+- Revise UI to accommodate new options tab.
+- General Improvements.
+- Upgrade dependencies.
+- Refactor storage code.
+- Refactor store constants.
+- Revise footer note to keep it minimal.
+
+### Removed
+
+- Credit link from footer.
+
 ## [0.1.0] - 2023-11-16
 
 ### Fixed

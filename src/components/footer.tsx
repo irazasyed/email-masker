@@ -1,3 +1,4 @@
+import Version from '@/components/version'
 import { lang } from '@/lib/utils'
 
 function Footer() {
@@ -8,32 +9,27 @@ function Footer() {
           <span className="w-full border-t" />
         </div>
       </div>
-      <p>
-        {lang('footer')}{' '}
-        <a
-          href="https://dub.sh/skiff-ref"
-          target="_blank"
-          className="underline"
-          title="Sign Up for Skiff Mail">
-          Skiff
-        </a>{' '}
-        <a
-          href="https://dub.sh/skiff-quick-alias"
-          title="Learn more about Quick Aliases"
-          target="_blank"
-          className="underline">
-          Quick Aliases
-        </a>{' '}
-        <br />
-        {lang('credit')}{' '}
-        <a
-          href="https://dub.sh/irs-x"
-          title="Follow for Updates"
-          target="_blank"
-          className="underline">
-          @irazasyed
-        </a>
-      </p>
+      <div className="flex items-center justify-between">
+        <p>
+          {lang('footer')}{' '}
+          <a
+            href="https://dub.sh/skiff-ref"
+            target="_blank"
+            className="underline"
+            title="Sign Up for Skiff Mail">
+            Skiff
+          </a>{' '}
+          <a
+            href="https://dub.sh/skiff-quick-alias"
+            title="Learn more about Quick Aliases"
+            target="_blank"
+            className="underline">
+            Quick Aliases
+          </a>{' '}
+        </p>
+
+        <Version />
+      </div>
     </div>
   )
 }

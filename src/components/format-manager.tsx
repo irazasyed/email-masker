@@ -3,7 +3,10 @@ import React, { useRef } from 'react'
 import { useStorage } from '@plasmohq/storage/hook'
 import Info from '@/components/info'
 import { Badge, Button, Input, Label } from '@/components/ui'
-import { DEFAULT_EMAIL_FORMAT, STORAGE_EMAIL_FORMAT } from '@/lib/email-format'
+import {
+  DEFAULT_EMAIL_FORMAT,
+  STORAGE_EMAIL_FORMAT
+} from '@/lib/storage/email-format'
 import { isEmail, isSkiffDomain, lang, notify } from '@/lib/utils'
 
 const shortcodes = {

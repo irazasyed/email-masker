@@ -12,12 +12,8 @@
     "description": "Title of the extension."
   },
   "footer": {
-    "message": "Mask your Email Address using",
+    "message": "Uses",
     "description": "Footer note of the extension."
-  },
-  "credit": {
-    "message": "Extension by",
-    "description": "Credit note of the extension."
   },
   "maskedEmailLabel": {
     "message": "Masked Email",
@@ -92,5 +88,33 @@
   "shortcodeNumbersDesc": {
     "message": "Random numbers (length)",
     "description": "Description for shortcode [numbers:length]."
+  },
+  "generatorTooltip": {
+    "message": "Generator",
+    "description": "Tooltip instruction for Generator Page"
+  },
+  "optionsTooltip": {
+    "message": "Options",
+    "description": "Tooltip instruction for Options Page"
+  },
+  "excludeList": {
+    "message": "Exclude List",
+    "description": "Label for exclude list."
+  },
+  "excludeListDescLine1": {
+    "message": "List of urls to exclude from showing autofill button.",
+    "description": "Description line 1 for exclude list."
+  },
+  "excludeListDescLine2": {
+    "message": "One url per line. Supports wildcards.",
+    "description": "Description line 2 for exclude list."
+  },
+  "autofill": {
+    "message": "Autofill",
+    "description": "Label for autofill."
+  },
+  "autofillDesc": {
+    "message": "On-Page Autofill Button",
+    "description": "Description for autofill option."
   }
 }

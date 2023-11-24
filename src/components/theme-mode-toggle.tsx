@@ -8,12 +8,13 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui'
-import { THEME_STORE_KEY } from '@/lib/constants'
+import { STORE_KEYS } from '@/lib/constants'
 
 const getSystemTheme = () =>
   window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 
-const getTheme = () => localStorage.getItem(THEME_STORE_KEY) ?? getSystemTheme()
+const getTheme = () =>
+  localStorage.getItem(STORE_KEYS.THEME) ?? getSystemTheme()
 
 const applyTheme = (isDark: boolean) => {
   const root = document.documentElement
@@ -24,7 +25,7 @@ const applyTheme = (isDark: boolean) => {
 applyTheme(getTheme() === 'dark')
 
 export default function ThemeModeToggle() {
-  const [theme, setTheme] = useStorage(THEME_STORE_KEY, getTheme())
+  const [theme, setTheme] = useStorage(STORE_KEYS.THEME, getTheme())
 
   useEffect(() => {
     const isDark =
@@ -32,8 +33,8 @@ export default function ThemeModeToggle() {
 
     applyTheme(isDark)
 
-    localStorage.removeItem(THEME_STORE_KEY)
-    localStorage.setItem(THEME_STORE_KEY, isDark ? 'dark' : 'light')
+    localStorage.removeItem(STORE_KEYS.THEME)
+    localStorage.setItem(STORE_KEYS.THEME, isDark ? 'dark' : 'light')
   }, [theme])
 
   return (

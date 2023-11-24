@@ -28,9 +28,9 @@ export async function getActiveTabUrl() {
 
 // Get the hostname of the active tab's URL
 export async function getActiveTabHostname() {
-  const tab = await getActiveTabUrl()
+  const { url } = await getActiveTabUrl()
 
-  return new URL(tab?.url ?? '').hostname
+  return url ? new URL(url).hostname : ''
 }
 
 // Open a new tab with a given URL

@@ -4,7 +4,10 @@ import { useStorage } from '@plasmohq/storage/hook'
 import Info from '@/components/info'
 import { Button, Input, Label } from '@/components/ui'
 import { applyShortcodesWithDomain } from '@/lib/apply-shortcodes'
-import { DEFAULT_EMAIL_FORMAT, STORAGE_EMAIL_FORMAT } from '@/lib/email-format'
+import {
+  DEFAULT_EMAIL_FORMAT,
+  STORAGE_EMAIL_FORMAT
+} from '@/lib/storage/email-format'
 import { copyToClipboard, lang, notify } from '@/lib/utils'
 
 function MaskedEmail({ hostname }: { hostname: string }) {
@@ -42,7 +45,7 @@ function MaskedEmail({ hostname }: { hostname: string }) {
               id="masked-email"
               placeholder={lang('maskedEmailLabel')}
               value={maskedEmail}
-              className="read-only:cursor-pointer flex-1"
+              className="read-only:cursor-pointer flex-1 bg-muted"
               onClick={onClickCopy}
               readOnly={true}
             />
