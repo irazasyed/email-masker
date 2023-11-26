@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 - Refactor storage code.
 - Refactor store constants.
 - Revise footer note to keep it minimal.
+- Switch toaster to react-hot-toast.
 
 ### Removed
 
