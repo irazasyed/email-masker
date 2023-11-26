@@ -1,5 +1,6 @@
 import { Copy, Flame, VenetianMask } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
+import toast from 'react-hot-toast'
 import { useStorage } from '@plasmohq/storage/hook'
 import Info from '@/components/info'
 import { Button, Input, Label } from '@/components/ui'
@@ -8,7 +9,7 @@ import {
   DEFAULT_EMAIL_FORMAT,
   STORAGE_EMAIL_FORMAT
 } from '@/lib/storage/email-format'
-import { copyToClipboard, lang, notify } from '@/lib/utils'
+import { copyToClipboard, lang } from '@/lib/utils'
 
 function MaskedEmail({ hostname }: { hostname: string }) {
   const [emailFormat] = useStorage(STORAGE_EMAIL_FORMAT, DEFAULT_EMAIL_FORMAT)
@@ -25,7 +26,9 @@ function MaskedEmail({ hostname }: { hostname: string }) {
 
   const onClickCopy = () => {
     copyToClipboard(maskedEmail)
-    notify(lang('copySuccessToast') + ' 🔥')
+    toast.success(lang('copySuccessToast') + ' 🔥', {
+      id: 'copy-success-toast'
+    })
   }
 
   const handleGenerateClick = () => {

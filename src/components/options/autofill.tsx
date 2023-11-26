@@ -1,8 +1,9 @@
 import { TextCursorInput } from 'lucide-react'
 import React from 'react'
+import toast from 'react-hot-toast'
 import { Switch } from '@/components/ui/switch'
 import { Label } from '@/components/ui'
-import { lang, notify } from '@/lib/utils'
+import { lang } from '@/lib/utils'
 
 type AutofillState = boolean
 
@@ -38,7 +39,7 @@ function Autofill({ autofillStore }: { autofillStore: AutofillStore }) {
               setRenderValue(checked)
               await setStoreValue(checked)
 
-              notify(
+              toast.success(
                 lang('autofill') + ' ' + (checked ? 'Enabled' : 'Disabled')
               )
             }}

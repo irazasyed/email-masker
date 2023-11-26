@@ -3,7 +3,6 @@ import { generate } from 'random-words'
 import { twMerge } from 'tailwind-merge'
 import { getDomainWithoutSuffix } from 'tldts'
 import browser from 'webextension-polyfill'
-import { toast } from '@/components/ui/use-toast'
 import { DEFAULT_EMAIL_DOMAIN } from '@/lib/constants'
 
 // Language localization function
@@ -44,14 +43,6 @@ export function openNewTab(url: string) {
 // Copy text to the clipboard
 export function copyToClipboard(text: string) {
   void navigator.clipboard.writeText(text)
-}
-
-// Show a notification using a toast component
-export function notify(title: string, description?: string) {
-  toast({
-    title,
-    description
-  })
 }
 
 // Check if a string is a valid email

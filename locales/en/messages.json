@@ -35,26 +35,12 @@
     "message": "Shortcode Added",
     "description": "Toast success title for adding shortcode."
   },
-  "shortcodeAddedToastDesc": {
-    "message": "Added [$shortcode$] to the email format.",
-    "description": "Toast success description for adding shortcode.",
-    "placeholders": {
-      "shortcode": {
-        "content": "$1",
-        "example": "domain"
-      }
-    }
-  },
-  "invalidEmailFormatToast": {
-    "message": "Invalid Email Format",
-    "description": "Toast error title for invalid email format."
-  },
   "invalidEmailFormatToastDesc": {
     "message": "Please enter a valid email format.",
     "description": "Toast error description for invalid email format."
   },
   "invalidEmailDomainToastDesc": {
-    "message": "Must end with *.maskmy.id",
+    "message": "Email Format must end with *.maskmy.id",
     "description": "Toast error description for invalid email domain."
   },
   "emailFormatUpdatedToast": {

@@ -1,4 +1,5 @@
 import { ListX } from 'lucide-react'
+import toast from 'react-hot-toast'
 import { useStorage } from '@plasmohq/storage/hook'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
@@ -6,7 +7,7 @@ import {
   setExcludeListPatterns,
   STORAGE_EXCLUDE_LIST
 } from '@/lib/storage/exclude-list'
-import { lang, notify } from '@/lib/utils'
+import { lang } from '@/lib/utils'
 
 function ExcludeList() {
   const [excludeList, setExcludeList, { setRenderValue, setStoreValue }] =
@@ -27,7 +28,8 @@ function ExcludeList() {
           onBlur={async () => {
             await setStoreValue()
             await setExcludeListPatterns(excludeList)
-            notify('Exclude List Updated')
+
+            toast.success('Exclude List Updated')
           }}
         />
         <p className="text-sm text-muted-foreground">

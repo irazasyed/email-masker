@@ -1,5 +1,6 @@
 import { Mail, Save, Tags } from 'lucide-react'
 import React, { useRef } from 'react'
+import toast from 'react-hot-toast'
 import { useStorage } from '@plasmohq/storage/hook'
 import Info from '@/components/info'
 import { Badge, Button, Input, Label } from '@/components/ui'
@@ -7,7 +8,7 @@ import {
   DEFAULT_EMAIL_FORMAT,
   STORAGE_EMAIL_FORMAT
 } from '@/lib/storage/email-format'
-import { isEmail, isSkiffDomain, lang, notify } from '@/lib/utils'
+import { isEmail, isSkiffDomain, lang } from '@/lib/utils'
 
 const shortcodes = {
   domain: lang('shortcodeDomainDesc'),
@@ -30,34 +31,31 @@ export default function FormatManager() {
 
       emailInputRef.current.focus()
 
-      notify(
-        lang('shortcodeAddedToast') + ' 👍',
-        lang('shortcodeAddedToastDesc', [shortcode])
-      )
+      toast.success(lang('shortcodeAddedToast'))
     }
   }
 
   const handleEmailFormatSave = () => {
     if (!isEmail(emailFormat)) {
-      notify(
-        '🚨 ' + lang('invalidEmailFormatToast'),
-        lang('invalidEmailFormatToastDesc')
-      )
+      toast.error(lang('invalidEmailFormatToastDesc'), {
+        id: 'invalid-email-format-toast'
+      })
 
       return
     }
 
     if (!isSkiffDomain(emailFormat)) {
-      notify(
-        '🚨 ' + lang('invalidEmailFormatToast'),
-        lang('invalidEmailDomainToastDesc')
-      )
+      toast.error(lang('invalidEmailDomainToastDesc'), {
+        id: 'invalid-email-domain-toast'
+      })
 
       return
     }
 
     void setStoreValue()
-    notify(lang('emailFormatUpdatedToast') + ' 👍')
+    toast.success(lang('emailFormatUpdatedToast'), {
+      id: 'email-format-updated-toast'
+    })
   }
 
   const handleEmailFormatChange = (

@@ -1,8 +1,8 @@
 import { Flame, GithubIcon, Settings } from 'lucide-react'
+import { Toaster } from 'react-hot-toast'
 import icon from 'data-base64:~assets/icon.png'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Toaster } from '@/components/ui/toaster'
 import Footer from '@/components/footer'
 import Info from '@/components/info'
 import ThemeModeToggle from '@/components/theme-mode-toggle'
@@ -12,7 +12,17 @@ function Layout({ children }) {
   return (
     <main className="w-[32rem] mx-auto p-2">
       <Card className="border-0 rounded-none">
-        <Toaster />
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            style: {
+              background: 'hsl(var(--background))',
+              color: 'hsl(var(--foreground))',
+              border: '1px solid hsl(var(--border))',
+              fontSize: '1rem'
+            }
+          }}
+        />
         <Tabs defaultValue="generator">
           <CardHeader className="px-2 py-0">
             <div className="flex justify-between">
