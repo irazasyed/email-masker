@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.0] - 2023-11-28
+
 ### Added
 
 - Option to disable on-page email generation.
@@ -43,6 +45,7 @@ All notable changes to this project will be documented in this file.
 
 - Release of something awesome.
 
-[unreleased]: https://github.com/irazasyed/email-masker/compare/0.1.0...HEAD
+[unreleased]: https://github.com/irazasyed/email-masker/compare/0.2.0...HEAD
+[0.2.0]: https://github.com/irazasyed/email-masker/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/irazasyed/email-masker/compare/0.0.1...0.1.0
 [0.0.1]: https://github.com/irazasyed/email-masker/releases/tag/0.0.1
