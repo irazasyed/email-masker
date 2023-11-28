@@ -23,8 +23,10 @@ export const config: PlasmoCSConfig = {
   ]
 }
 
-function generateEmailIcon(input: HTMLInputElement, emailFormat: string) {
-  const generateEmail = () => {
+function generateEmailIcon(input: HTMLInputElement) {
+  const generateEmail = async () => {
+    const emailFormat = await getEmailFormat()
+
     if (input) {
       setValueForInput(
         input,
@@ -52,7 +54,7 @@ function generateEmailIcon(input: HTMLInputElement, emailFormat: string) {
     }
   })
 
-  input.addEventListener('click', (event) => {
+  input.addEventListener('click', async (event) => {
     if (
       isEventWithinDax(event, event.target as HTMLInputElement) &&
       input.offsetWidth > 50
@@ -60,7 +62,7 @@ function generateEmailIcon(input: HTMLInputElement, emailFormat: string) {
       event.preventDefault()
       event.stopImmediatePropagation()
       input.blur()
-      generateEmail()
+      await generateEmail()
     }
   })
 
@@ -78,11 +80,9 @@ const isEnabled = async () => {
 window.addEventListener('load', async () => {
   if (!(await isEnabled())) return
 
-  const emailFormat = await getEmailFormat()
-
   document
     .querySelectorAll(inputSelector)
     .forEach((input: HTMLInputElement) => {
-      generateEmailIcon(input, emailFormat)
+      generateEmailIcon(input)
     })
 })
