@@ -48,15 +48,10 @@ export const getDaxBoundingBox = (
     height: inputHeight
   } = input.getBoundingClientRect()
 
-  const inputRightPadding = Number.parseInt(
-    window.getComputedStyle(input).paddingRight,
-    10
-  )
-
   const width = 30
   const height = 30
   const top = inputTop + (inputHeight - height) / 2
-  const right = inputRight - inputRightPadding
+  const right = inputRight 
   const left = right - width
   const bottom = top + height
 
@@ -104,8 +99,8 @@ export const getBasicStyles = (input: HTMLInputElement, icon: string) => ({
   }`,
   'background-position': 'center right',
   'background-repeat': 'no-repeat',
-  'background-origin': 'content-box',
   'background-image': `url(${icon})`,
+  'padding-right': '24px',
   transition: 'background 0s'
 })
 
