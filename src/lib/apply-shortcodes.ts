@@ -45,7 +45,7 @@ function applyShortcodes(format: string): string {
  * @returns The formatted string with shortcodes and domain replacement.
  */
 function applyShortcodesWithDomain(format: string, domain: string): string {
-  return applyShortcodes(format).replace('[domain]', getPrimaryDomain(domain))
+  return applyShortcodes(format).replaceAll('[domain]', getPrimaryDomain(domain))
 }
 
 /**
