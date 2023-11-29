@@ -147,10 +147,13 @@ pnpm run format
 **Create a production bundle**: Generate a production bundle for the extension with:
 
 ```bash
+# Build for both Chrome and Firefox
 pnpm build
+# or
+pnpm build:chrome
 pnpm build:firefox
 # or
-npm run build
+npm run build:chrome
 npm run build:firefox
 ```
 
@@ -161,10 +164,14 @@ This will create a bundle ready to be zipped and published to the stores.
 **Prepare for publishing**: Package the extension for publishing using:
 
 ```bash
+# Build & Package for both Chrome and Firefox
 pnpm package
+# or
+pnpm package:chrome
 pnpm package:firefox
 # or
 npm run package
+npm run package:chrome
 npm run package:firefox
 ```
 
