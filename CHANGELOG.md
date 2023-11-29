@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.1]
+
+### Fixed
+
+- Fix closure over email format by @simplycpu #8
+- Replace all instances of `[domain]` by @simplycpu #5
+- Fix text overlaps with flame icon by @simplycpu #6
+
 ## [0.2.0] - 2023-11-28
 
 ### Added
@@ -45,7 +53,8 @@ All notable changes to this project will be documented in this file.
 
 - Release of something awesome.
 
-[unreleased]: https://github.com/irazasyed/email-masker/compare/0.2.0...HEAD
+[unreleased]: https://github.com/irazasyed/email-masker/compare/0.2.1...HEAD
+[0.2.1]: https://github.com/irazasyed/email-masker/compare/0.2.0...0.2.1
 [0.2.0]: https://github.com/irazasyed/email-masker/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/irazasyed/email-masker/compare/0.0.1...0.1.0
 [0.0.1]: https://github.com/irazasyed/email-masker/releases/tag/0.0.1

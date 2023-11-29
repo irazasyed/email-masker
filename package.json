@@ -2,7 +2,7 @@
   "name": "email-masker",
   "private": true,
   "displayName": "__MSG_extensionName__",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "__MSG_extensionDescription__",
   "author": "emailmasker@ehello.maskmy.id",
   "homepage": "https://github.com/irazasyed/email-masker",
