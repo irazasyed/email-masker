@@ -51,7 +51,7 @@ export const getDaxBoundingBox = (
   const width = 30
   const height = 30
   const top = inputTop + (inputHeight - height) / 2
-  const right = inputRight 
+  const right = inputRight
   const left = right - width
   const bottom = top + height
 
