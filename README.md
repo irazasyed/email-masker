@@ -4,7 +4,7 @@
 [![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/oedhkcdedcfloepkpacoocblokifkgjf?style=flat-square&label=Chrome%20Users)][link-cws]
 [![Mozilla Add-on Users](https://img.shields.io/amo/users/email-masker?style=flat-square&label=Firefox%20Users)][link-amo]
 
-> Email Masker is an open-source browser extension that helps you generate and use masked email addresses for your online accounts using [Skiff][link-skiff] [Quick Aliases](https://dub.sh/quick-alias).
+> Email Masker is an open-source browser extension that helps you generate and use masked email addresses for your online accounts.
 >
 > It helps you protect your privacy and keep your inbox clean from spam.
 
@@ -110,51 +110,51 @@ Here are some email format templates you can use based on your preference, you m
 A combination of `[domain]` and `[random:5]` is used as the default email format.
 
 ```
-[domain][random:5]@example.maskmy.id
+[domain].[random:5]@example.com
 ```
 
-The above format will generate email addresses like `github29wun@example.maskmy.id`
+The above format will generate email addresses like `github.29wun@example.com`
 
 **Random Strings**
 
 ```
-[random:8]@example.maskmy.id
+[random:8]@example.com
 ```
 
 **Random Words**
 
 ```
-[words:3]@example.maskmy.id
+[words:3]@example.com
 ```
 
 **Random Numbers**
 
 ```
-[numbers:8]@example.maskmy.id
+[numbers:8]@example.com
 ```
 
 **Random Words and Numbers**
 
 ```
-[words:2][numbers:4]@example.maskmy.id
+[words:2][numbers:4]@example.com
 ```
 
 **Random Words and Numbers (With Separator)**
 
 ```
-[words:2]-[numbers:4]@example.maskmy.id
+[words:2]-[numbers:4]@example.com
 ```
 
 **Domain and Random Words**
 
 ```
-[domain][words:2]@example.maskmy.id
+[domain][words:2]@example.com
 ```
 
 **Prefix and Random Strings**
 
 ```
-prefix-[random:8]@example.maskmy.id
+prefix-[random:8]@example.com
 ```
 
 ## Contributing
@@ -178,11 +178,6 @@ MIT
 - [Irfaq Syed](https://github.com/irazasyed)
 - [All Contributors](../../contributors)
 
-## Disclaimer
-
-This project is not affiliated with, endorsed by, or sponsored in any way by Skiff.
-
-[link-skiff]: https://dub.sh/skiff-ref 'Sign up for Skiff Mail'
 [link-cws]: https://dub.sh/emailmasker-chrome 'Version published on Chrome Web Store'
 [link-amo]: https://dub.sh/emailmasker-firefox 'Version published on Mozilla Add-ons'
 [link-oas]: https://dub.sh/emailmasker-opera 'Version published on Opera Add-ons'

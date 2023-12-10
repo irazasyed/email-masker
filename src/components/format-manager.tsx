@@ -8,7 +8,7 @@ import {
   DEFAULT_EMAIL_FORMAT,
   STORAGE_EMAIL_FORMAT
 } from '@/lib/storage/email-format'
-import { isEmail, isSkiffDomain, lang } from '@/lib/utils'
+import { isEmail, lang } from '@/lib/utils'
 
 const shortcodes = {
   domain: lang('shortcodeDomainDesc'),
@@ -39,14 +39,6 @@ export default function FormatManager() {
     if (!isEmail(emailFormat)) {
       toast.error(lang('invalidEmailFormatToastDesc'), {
         id: 'invalid-email-format-toast'
-      })
-
-      return
-    }
-
-    if (!isSkiffDomain(emailFormat)) {
-      toast.error(lang('invalidEmailDomainToastDesc'), {
-        id: 'invalid-email-domain-toast'
       })
 
       return

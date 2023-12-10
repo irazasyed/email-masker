@@ -4,16 +4,12 @@
     "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "An open-source extension to generate masked email addresses using Quick Aliases.",
+    "message": "An open-source extension to generate masked email addresses.",
     "description": "Description of the extension."
   },
   "title": {
     "message": "Email Masker",
     "description": "Title of the extension."
-  },
-  "footer": {
-    "message": "Uses",
-    "description": "Footer note of the extension."
   },
   "maskedEmailLabel": {
     "message": "Masked Email",
@@ -38,10 +34,6 @@
   "invalidEmailFormatToastDesc": {
     "message": "Please enter a valid email format.",
     "description": "Toast error description for invalid email format."
-  },
-  "invalidEmailDomainToastDesc": {
-    "message": "Email Format must end with *.maskmy.id",
-    "description": "Toast error description for invalid email domain."
   },
   "emailFormatUpdatedToast": {
     "message": "Email Format Updated",

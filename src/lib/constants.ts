@@ -6,5 +6,5 @@ export const STORE_KEYS = {
   THEME: 'em_theme'
 }
 
-export const DEFAULT_EMAIL_DOMAIN = 'maskmy.id'
-export const DEFAULT_EMAIL_FORMAT = `[domain][random:5]@example.${DEFAULT_EMAIL_DOMAIN}`
+export const DEFAULT_EMAIL_DOMAIN = 'example.com'
+export const DEFAULT_EMAIL_FORMAT = `[domain].[random:5]@${DEFAULT_EMAIL_DOMAIN}`
