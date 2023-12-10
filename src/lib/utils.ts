@@ -98,10 +98,3 @@ export function generateRandomWords(count: number): string {
     join: ''
   })
 }
-
-// Check if a hostname is associated with Skiff domains
-export function isSkiffDomain(hostname: string): boolean {
-  return (
-    hostname.endsWith(DEFAULT_EMAIL_DOMAIN) || hostname.endsWith('skiff.com')
-  )
-}

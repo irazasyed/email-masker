@@ -9,25 +9,7 @@ function Footer() {
           <span className="w-full border-t" />
         </div>
       </div>
-      <div className="flex items-center justify-between">
-        <p>
-          {lang('footer')}{' '}
-          <a
-            href="https://dub.sh/skiff-ref"
-            target="_blank"
-            className="underline"
-            title="Sign Up for Skiff Mail">
-            Skiff
-          </a>{' '}
-          <a
-            href="https://dub.sh/skiff-quick-alias"
-            title="Learn more about Quick Aliases"
-            target="_blank"
-            className="underline">
-            Quick Aliases
-          </a>{' '}
-        </p>
-
+      <div className="flex items-end justify-end">
         <Version />
       </div>
     </div>
