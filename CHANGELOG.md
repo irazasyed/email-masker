@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file.
 - Replace all instances of `[domain]` by @simplycpu #5
 - Fix text overlaps with flame icon by @simplycpu #6
 
+### Removed
+
+- Skiff components in favor of supporting multi-services by @pabloscloud #10
+
 ## [0.2.0] - 2023-11-28
 
 ### Added
